@@ -15,13 +15,13 @@ module.exports = (app,logger) =>{
         res.render("login")
     })
 
-    app.get("/login",(req,res)=>{
+    app.post("/login",(req,res)=>{
         //session check
-        res.redirect("/main")
+        res.redirect("/dashBoard")
     })
 
-    app.get("/main",(req,res)=>{
-        res.render("/dashBoard")
+    app.get("/dashBoard",(req,res)=>{
+        res.render("dashBoard")
     })
 
     app.get("/404",(req,res)=>{
